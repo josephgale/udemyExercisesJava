@@ -42,17 +42,28 @@ NOTES
 * The solution will not be accepted if there are extra spaces
 
 */
+public class MinutesCalculator {
+    public static void main(String[] args){
 
-public class MinutesToYearsDaysCalculator {
-   
-   public static void printYearsAndDays(long minutes) {
-        if (minutes < 0) {
-            System.out.println("Invalid Value");
+        calculate(525600);
+        calculate(1051200);
+        calculate(561721);
+        calculate(-1);
+        calculate(1500);
+    }
+    public static void calculate(long minutes){
+        long years = minutes/60/24/365;
+        long days = minutes/60/24%365;
+        long remainderMinutes = minutes-((years*60*24*365)+(days*60*24));
+        long remainderHours = remainderMinutes/60;
+        long finalMinutes = remainderMinutes%60;
+
+        if(minutes<0){
+            System.out.println("Invalid value");
         } else{
-        int wholeYears = (int)minutes/(60*24*365);
-        int remainderMinutes = (int)minutes % (60*24*365);
-        int remainderDays = remainderMinutes/(60*24);
-        System.out.println(minutes + " min = " + wholeYears + " y and " + remainderDays + " d");
+            System.out.println(minutes + " minutes = " + years + " year(s) " + days +
+                    " day(s) " + remainderHours + " hour(s) " + finalMinutes + " minute(s)");
         }
     }
 }
+
