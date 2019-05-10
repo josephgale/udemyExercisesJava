@@ -18,6 +18,7 @@ public class InputChallenge {
             count++;
         }
         System.out.println("The sum is " + sum);
+        input.close();
     }
 
 }
