@@ -1,16 +1,123 @@
-Assignment: 
-	// We are going to go back to the car analogy.
-        // Create a base class called Car
-        // It should have a few fields that would be appropriate for a generice car calss.
-        // engine, cylinders, wheels, etc.
-        // Constructor should initialize cylinders (number of) and name, and set wheels to 4
-        // and engine to true. Cylinders and names would be passed parameters.
-        //
-        // Create appropriate getters
-        //
-        // Create some methods like startEngine, accelerate, and brake
-        //
-        // show a message for each in the base class
-        // Now create 3 sub classes for your favorite vehicles.
-        // Override the appropriate methods to demonstrate polymorphism in use.
-        // put all classes in the one java file (this one).
+// We are going to go back to the car analogy.
+// Create a base class called Car
+// It should have a few fields that would be appropriate for a generice car calss.
+// engine, cylinders, wheels, etc.
+// Constructor should initialize cylinders (number of) and name, and set wheels to 4
+// and engine to true. Cylinders and names would be passed parameters.
+//
+// Create appropriate getters
+//
+// Create some methods like startEngine, accelerate, and brake
+//
+// show a message for each in the base class
+// Now create 3 sub classes for your favorite vehicles.
+// Override the appropriate methods to demonstrate polymorphism in use.
+// put all classes in the one java file (this one).
+
+
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        SportsCar corvette = new Corvette(8,"Vettie");
+        SportsCar lamborghini = new Lamborghini(12,"Lammie");
+        SportsCar bmw = new BMW(8,"Beamer");
+
+        corvette.drive();
+        lamborghini.drive();
+        bmw.drive();
+
+        System.out.println(corvette.getName());
+        System.out.println(lamborghini.getCylinders());
+        System.out.println(bmw.getWheels());
+        System.out.println(bmw.getClass());
+
+    }
+}
+
+class SportsCar {
+    private int cylinders;
+    private String name;
+    private int wheels;
+    private boolean engine;
+
+    public SportsCar(int cylinders, String name) {
+        this.cylinders = cylinders;
+        this.name = name;
+        this.wheels = 4;
+        this.engine = true;
+    }
+
+    public void drive(){
+        System.out.println("Roar");
+    }
+
+    public int getCylinders() {
+        return cylinders;
+    }
+
+    public void setCylinders(int cylinders) {
+        this.cylinders = cylinders;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getWheels() {
+        return wheels;
+    }
+
+    public void setWheels(int wheels) {
+        this.wheels = wheels;
+    }
+
+    public boolean isEngine() {
+        return engine;
+    }
+
+    public void setEngine(boolean engine) {
+        this.engine = engine;
+    }
+}
+
+class Corvette extends SportsCar{
+    public Corvette(int cylinders, String name) {
+        super(cylinders, name);
+    }
+
+    @Override
+    public void drive() {
+        super.drive();
+        System.out.println("Hearing American muscle!");
+    }
+}
+
+class Lamborghini extends SportsCar{
+    public Lamborghini(int cylinders, String name) {
+        super(cylinders, name);
+    }
+
+    @Override
+    public void drive() {
+        super.drive();
+        System.out.println("Hearing Italian style!");
+    }
+}
+
+class BMW extends SportsCar{
+    public BMW(int cylinders, String name) {
+        super(cylinders, name);
+    }
+
+    @Override
+    public void drive() {
+        super.drive();
+        System.out.println("Listen to that German engineering");
+    }
+}
