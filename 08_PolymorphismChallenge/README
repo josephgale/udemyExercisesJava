@@ -1,5 +1,5 @@
 Assignment: 
-	      // We are going to go back to the car analogy.
+	// We are going to go back to the car analogy.
         // Create a base class called Car
         // It should have a few fields that would be appropriate for a generice car calss.
         // engine, cylinders, wheels, etc.
