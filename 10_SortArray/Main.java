@@ -5,7 +5,6 @@ public class Main {
 
     public static void main(String[] args) {
         int[] inputArray = getIntegers(5);
-        //printArray(inputArray);
         int[] mySortedArray = sortArray(inputArray);
         printArray(mySortedArray);
     }
