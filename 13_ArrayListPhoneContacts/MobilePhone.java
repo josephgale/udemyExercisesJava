@@ -1,3 +1,5 @@
+package com.java21days;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -6,14 +8,14 @@ public class MobilePhone {
     private ArrayList<Contact> contacts;
     Scanner scanner = new Scanner(System.in);
 
-    public MobilePhone(long number) {
+    private MobilePhone(long number) {
         this.number = number;
         this.contacts = new ArrayList<>();
 
     }
 
     //functions for contacts:
-    public boolean searchContact(String name){
+    private boolean searchContact(String name){
         boolean found=false;
         for(int i=0;i<contacts.size();i++){
            if(contacts.get(i).getName().toLowerCase()
@@ -24,7 +26,7 @@ public class MobilePhone {
       return found;
     }
 
-    public boolean searchNumber(Long number){
+    private boolean searchNumber(Long number){
         boolean found=false;
         for(int i=0;i<contacts.size();i++){
             if(contacts.get(i).getNumber()==number){
@@ -35,7 +37,7 @@ public class MobilePhone {
     }
 
 
-    public void addContact(String name,long number){
+    private void addContact(String name,long number){
         if(searchContact(name)){
             System.out.println("Contact already exists");
         }else if(searchNumber(number)){
@@ -47,7 +49,7 @@ public class MobilePhone {
         }
     }
 
-    public void updateContact(String name){
+    private void updateContact(String name){
         if(!searchContact(name)){
             System.out.println("No such contact exists");
         }else{
@@ -78,7 +80,7 @@ public class MobilePhone {
 
     }
 
-   public void deleteContact(String name){
+   private void deleteContact(String name){
         if(!searchContact(name)){
             System.out.println("No such contact exists");
         }else{
@@ -93,14 +95,14 @@ public class MobilePhone {
         }
     }
 
-    public void printContacts(){
+    private void printContacts(){
         for(int i=0;i<contacts.size();i++){
             System.out.println(contacts.get(i).getName() + " " +
                            contacts.get(i).getNumber() );
         }
     }
 
-    public void pushContactsButton(){
+    private void pushContactsButton(){
         optionsMenu();
         boolean quit = false;
         while(!quit){
