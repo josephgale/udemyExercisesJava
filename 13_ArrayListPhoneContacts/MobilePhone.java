@@ -8,7 +8,7 @@ public class MobilePhone {
     private ArrayList<Contact> contacts;
     Scanner scanner = new Scanner(System.in);
 
-    private MobilePhone(long number) {
+    public MobilePhone(long number) {
         this.number = number;
         this.contacts = new ArrayList<>();
 
