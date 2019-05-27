@@ -1,0 +1,9 @@
+package com.udemy;
+
+public class FootballPlayer extends Player {
+    public FootballPlayer(String name) {
+        super(name);
+    }
+
+    //only constructor class required, not others
+}
