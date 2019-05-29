@@ -1,2 +1,3 @@
 This upload shows the binary search algorithm in the Theatre class. 
 This upload also adds Comparable interface to Seat class, an inner class in Theatre
+Point to understand: in order to use Collections.sort(), your object in the list to be sorted needs to implement the Comparable interface
