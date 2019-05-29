@@ -1,0 +1,5 @@
+Topics covered in tutorial: 
+1. How to iterate through a HashMap to print it out: 
+  a. for( ObjectType object:HashMapName.keySet()){}
+2. Add an objet to a HashMap where that HashMap is within an object of another HashMap
+  ex: addExit() to Location objects that are part of a HashMap called locations.
