@@ -1,0 +1,9 @@
+This tutorial has annotations for the following concepts: 
+1. Lexographical comparisons
+  a. 'A' is less than 'a', '1' is less than 'A', '01' is less than '1'
+  
+2. The logic behind how the Theatre seat numbers are derived. 
+  a. using String.format("%2d", variableChoice)
+
+3. No annotations, but personal review of using inner class in conjunction with addSeat
+to use booleans when employing method to addSeat.
